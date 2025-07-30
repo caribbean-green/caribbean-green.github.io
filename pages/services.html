@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Services - Caribbean Green Infrastructure" />
+    <title>Services - CGI</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/navbar.css" />
+    <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/services.css" />
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <header id="navbar-placeholder"></header>
+
+    <!-- SERVICES -->
+    <section class="services-section py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold text-success mb-5 text-uppercase">SERVICES</h2>
+
+            <!-- SERVICE 1 -->
+            <div class="service-card d-flex flex-column flex-md-row align-items-center mb-5 shadow-sm">
+                <div class="service-text pe-md-5">
+                    <h4 class="fw-bold text-success mb-3">BIM MANAGEMENT</h4>
+                    <p>
+                        We provide comprehensive Building Information Modeling (BIM) services that go beyond basic
+                        coordination.
+                        Our capabilities include advanced 3D modeling, clash detection, and model-based quantity
+                        takeoffs,
+                        integrated into digital collaboration environments (like Autodesk Construction Cloud). We work
+                        seamlessly
+                        with architects, engineers, contractors, and owners to ensure design accuracy, minimize
+                        construction risks,
+                        and improve decision-making from concept to handover. Our BIM workflows streamline every stage
+                        of the
+                        project lifecycle, from early design to facilities management.
+                    </p>
+                </div>
+                <div class="service-image mt-4 mt-md-0">
+                    <img src="../assets/img/Services/FOTO 1 BIM MANAGEMENT.jpg" alt="BIM Management"
+                        class="img-fluid rounded shadow">
+                </div>
+            </div>
+
+            <!-- SERVICE 2 -->
+            <div class="service-card d-flex flex-column flex-md-row-reverse align-items-center mb-5 shadow-sm">
+                <div class="service-text ps-md-5">
+                    <h4 class="fw-bold text-success mb-3">EPC Contract (Engineering, Procurement & Construction)</h4>
+                    <p>
+                        Our EPC model offers a turnkey solution where we assume full responsibility for the engineering,
+                        procurement, construction, and commissioning of the project. This single-point-of-contact
+                        approach ensures
+                        better control over cost, timeline, and quality. We leverage multidisciplinary engineering
+                        expertise, global
+                        procurement networks, and robust project management systems to deliver complex infrastructure
+                        and building
+                        projects efficiently. Our EPC execution model minimizes client risk while maximizing value
+                        through
+                        accountability, predictability, and performance.
+                    </p>
+                </div>
+                <div class="service-image mt-4 mt-md-0">
+                    <img src="../assets/img/Services/FOTO 2 EPC.jpg" alt="EPC" class="img-fluid rounded shadow">
+                </div>
+            </div>
+
+            <!-- SERVICE 3 -->
+            <div class="service-card d-flex flex-column flex-md-row align-items-center mb-5 shadow-sm">
+                <div class="service-text pe-md-5">
+                    <h4 class="fw-bold text-success mb-3">EPC + F (Engineering, Procurement, Construction with
+                        Financing)</h4>
+                    <p>
+                        We offer an integrated EPC + F model that not only covers project design and execution, but also
+                        includes
+                        tailored financial structuring to bring large-scale projects to life. This approach is ideal for
+                        public-private partnerships and capital-intensive developments in infrastructure, healthcare,
+                        and real
+                        estate. By bundling financing with full EPC capabilities, we simplify project delivery, reduce
+                        the burden on
+                        client balance sheets, and accelerate time to market. Our strategic financial partnerships and
+                        technical
+                        execution capacity enable us to deliver high-impact projects where others can’t.
+                    </p>
+                </div>
+                <div class="service-image mt-4 mt-md-0">
+                    <img src="../assets/img/Services/FOTO 3 EPC + F.jpg" alt="EPC + F" class="img-fluid rounded shadow">
+                </div>
+            </div>
+
+            <!-- SECTOR STATEMENT -->
+            <div class="text-center my-5">
+                <h5 class="text-success fw-bold">Multiple Sectors, 1 Trusted Partner</h5>
+                <p class="mx-auto" style="max-width: 700px;">
+                    Our capabilities go beyond a single specialty. We deliver end-to-end engineering, construction, and
+                    energy
+                    solutions across key sectors. Our portfolio reflects our technical strength, adaptability, and
+                    commitment to
+                    excellence, no matter the industry.
+                </p>
+                <h5 class="text-success fw-bold">We've developed high-impact projects in sectors such as:</h5>
+            </div>
+
+            <!-- SECTOR BUTTONS -->
+            <div class="row text-center justify-content-center gy-3">
+                <div class="col-6 col-md-3">
+                    <div class="btn btn-outline-success rounded-pill px-4 w-100">Hospitality - Commercial</div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="btn btn-outline-success rounded-pill px-4 w-100">Government - Institutional</div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="btn btn-outline-success rounded-pill px-4 w-100">Health Care</div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="btn btn-outline-success rounded-pill px-4 w-100">Real Estate - Residential</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer-placeholder"></footer>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        fetch("../components/navbar.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("navbar-placeholder").innerHTML = data);
+
+        fetch("../components/footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+    </script>
+</body>
+
+</html>

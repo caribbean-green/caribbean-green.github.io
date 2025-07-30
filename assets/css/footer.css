@@ -1,0 +1,49 @@
+/* ================================
+   Estilos para footer.html
+   ================================ */
+
+.custom-footer {
+  background-color: #f2f2f2;
+  font-size: 0.9rem;
+}
+
+.custom-footer p {
+  margin-bottom: 0.5rem;
+}
+
+.footer-contact p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Íconos sociales */
+.custom-footer i {
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.custom-footer i:hover {
+  transform: scale(1.2);
+  color: #0a7e3e;
+}
+
+/* Logo responsivo */
+.custom-footer img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-contact p {
+    font-size: 1rem;
+  }
+
+  .custom-footer {
+    text-align: center;
+  }
+
+  .custom-footer .text-md-start,
+  .custom-footer .text-md-end {
+    text-align: center !important;
+  }
+}
