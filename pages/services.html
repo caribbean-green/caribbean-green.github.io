@@ -23,6 +23,32 @@
   <header id="navbar-placeholder"></header>
 
   <!-- SERVICES -->
+
+
+  <!-- SECTOR STATEMENT -->
+  <div class="text-center my-5">
+    <h2 class="section-title text-success">MULTIPLE SECTORS, 1 TRUSTED PARTNER</h2>
+    <p class="mx-auto text-justify" style="max-width: 700px;">
+      Our capabilities go beyond a single specialty. We deliver end-to-end engineering, construction, and energy
+      solutions across key sectors. Our portfolio reflects our technical strength, adaptability, and commitment to
+      excellence, no matter the industry.
+    </p>
+    <h5 class="text-success fw-bold">We've developed high-impact projects in sectors such as:</h5>
+  </div>
+
+  <!-- SECTOR BUTTONS -->
+  <div class="container my-4">
+    <div class="d-flex flex-wrap justify-content-center gap-3">
+      <div class="sector-btn">Infrastructure</div>
+      <div class="sector-btn">Hospitality - Commercial</div>
+      <div class="sector-btn">Government - Institutional</div>
+      <div class="sector-btn">Health Care</div>
+      <div class="sector-btn">Real Estate - Residential</div>
+    </div>
+  </div>
+
+  </section>
+
   <section class="services-section py-5">
     <div class="container">
       <h2 class="text-center fw-bold text-success mb-5 text-uppercase">SERVICES</h2>
@@ -82,49 +108,22 @@
         </div>
       </div>
 
-      <!-- SECTOR STATEMENT -->
-      <div class="text-center my-5">
-        <h5 class="text-success fw-bold">Multiple Sectors, 1 Trusted Partner</h5>
-        <p class="mx-auto" style="max-width: 700px;">
-          Our capabilities go beyond a single specialty. We deliver end-to-end engineering, construction, and energy
-          solutions across key sectors. Our portfolio reflects our technical strength, adaptability, and commitment to
-          excellence, no matter the industry.
-        </p>
-        <h5 class="text-success fw-bold">We've developed high-impact projects in sectors such as:</h5>
-      </div>
 
-      <!-- SECTOR BUTTONS -->
-      <div class="row text-center justify-content-center gy-3">
-        <div class="col-6 col-md-3">
-          <div class="btn btn-outline-success rounded-pill px-4 w-100">Hospitality - Commercial</div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="btn btn-outline-success rounded-pill px-4 w-100">Government - Institutional</div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="btn btn-outline-success rounded-pill px-4 w-100">Health Care</div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="btn btn-outline-success rounded-pill px-4 w-100">Real Estate - Residential</div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer id="footer-placeholder"></footer>
+      <!-- FOOTER -->
+      <footer id="footer-placeholder"></footer>
 
-  <!-- JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    fetch("../components/navbar.html")
-      .then(res => res.text())
-      .then(data => document.getElementById("navbar-placeholder").innerHTML = data);
+      <!-- JS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script>
+        fetch("../components/navbar.html")
+          .then(res => res.text())
+          .then(data => document.getElementById("navbar-placeholder").innerHTML = data);
 
-    fetch("../components/footer.html")
-      .then(res => res.text())
-      .then(data => document.getElementById("footer-placeholder").innerHTML = data);
-  </script>
+        fetch("../components/footer.html")
+          .then(res => res.text())
+          .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+      </script>
 </body>
 
 </html>
