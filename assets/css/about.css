@@ -1,54 +1,17 @@
 /* ================================
    Estilos para about.html
-   ================================ */
+================================ */
 
-/* Sección: ABOUT US */
+/* ----------- ABOUT US ----------- */
 .about-section .about-text {
-  text-align: center;
   font-size: 1.1rem;
   line-height: 1.8;
-  margin-bottom: 1.5rem;
-}
-
-/* Sección: WHAT WE DO + OUR VALUE */
-.value-icon {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid #198754;
-  margin-bottom: 10px;
-}
-
-section .text-justify {
+  margin-bottom: 1.8rem;
   text-align: justify;
+  text-wrap: pretty;
 }
 
-/* Sección: OUR PEOPLE */
-.project-image {
-  height: 250px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-/* Responsive específico */
-@media (max-width: 768px) {
-  .value-icon {
-    width: 60px;
-    height: 60px;
-  }
-
-  .about-section .about-text {
-    font-size: 1rem;
-    text-align: justify;
-  }
-
-  .project-image {
-    height: 200px;
-  }
-}
-
-/* Secciones WHAT WE DO & OUR VALUE */
+/* ----------- Section Title ----------- */
 .section-title {
   font-size: 2rem;
   font-weight: 700;
@@ -60,6 +23,21 @@ section .text-justify {
   padding-bottom: 0.4rem;
 }
 
+/* ----------- ICONS Shared (What We Do & Our Value) ----------- */
+.value-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #198754;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.value-icon:hover {
+  transform: scale(1.1);
+}
+
 .icon-card {
   background-color: #fff;
   border-radius: 12px;
@@ -67,7 +45,11 @@ section .text-justify {
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
-  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  min-height: 260px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
 }
 
 .icon-card:hover {
@@ -83,6 +65,7 @@ section .text-justify {
   border: 2px solid #198754;
   padding: 5px;
   background-color: #f8f9fa;
+  margin: 0 auto;
 }
 
 .icon-card h6 {
@@ -96,30 +79,10 @@ section .text-justify {
   color: #333;
   margin-top: 0.5rem;
   text-align: justify;
+  flex-grow: 1;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .icon-card img {
-    width: 60px;
-    height: 60px;
-  }
-  .icon-card h6 {
-    font-size: 0.95rem;
-  }
-  .icon-card p {
-    font-size: 0.85rem;
-  }
-}
-
-.value-icon {
-  transition: transform 0.3s ease;
-}
-.value-icon:hover {
-  transform: scale(1.1);
-}
-
-/* OUR PEOPLE - Overlay Effect*/
+/* ----------- OUR PEOPLE Section ----------- */
 .people-image-container {
   position: relative;
   overflow: hidden;
@@ -150,4 +113,31 @@ section .text-justify {
 
 .people-image-container:hover .people-image {
   transform: scale(1.02);
+}
+
+/* ----------- Responsive ----------- */
+@media (max-width: 768px) {
+  .about-section .about-text {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .value-icon,
+  .icon-card img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon-card h6 {
+    font-size: 0.95rem;
+  }
+
+  .icon-card p {
+    font-size: 0.85rem;
+  }
+
+  .project-image {
+    height: 200px;
+  }
 }
