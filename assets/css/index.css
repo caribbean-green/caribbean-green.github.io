@@ -1,8 +1,8 @@
 /* ================================
    Estilos para index.html
-   ================================ */
+================================ */
 
-/* Hero (Carrusel principal) */
+/* ----------- HERO (Carrusel) ----------- */
 .hero-carousel {
   max-height: 500px;
   overflow: hidden;
@@ -24,96 +24,7 @@ section:first-of-type,
   padding-top: 0 !important;
 }
 
-/* About Section */
-.about-section img {
-  max-height: 400px;
-  object-fit: cover;
-}
-
-.about-section .about-text {
-  text-align: center;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
-}
-
-/* Services & Projects (Tarjetas) */
-.bg-success {
-  background-color: #198754 !important;
-}
-
-.project-image {
-  height: 250px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-/* OUR VALUE */
-.value-icon {
-  width: 90px;
-  height: 90px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid #198754;
-  margin-bottom: 10px;
-}
-
-.value-card {
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  background-color: #fff;
-  height: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
-}
-
-.value-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
-.value-card p {
-  flex-grow: 1;
-}
-
-/* Footer */
-.footer-contact p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}/* ================================
-   Estilos para index.html
-   ================================ */
-
-/* Hero (Carrusel principal) */
-.hero-carousel {
-  max-height: 500px;
-  overflow: hidden;
-  margin-top: 0;
-}
-
-.carousel-img {
-  height: 500px;
-  object-fit: cover;
-  width: 100%;
-}
-
-#heroCarousel,
-.hero-carousel,
-section:first-of-type,
-.carousel-inner,
-.carousel-item:first-child {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-/* ================================
-   ABOUT US Section
-================================== */
+/* ----------- ABOUT US Section ----------- */
 .about-section {
   background-color: #f8f9fa;
 }
@@ -132,36 +43,84 @@ section:first-of-type,
   border-radius: 6px;
 }
 
+/* ----------- Títulos con línea decorativa ----------- */
 .section-title {
   position: relative;
-  display: block;          
-  width: fit-content;      
-  margin: 0 auto;           
-  padding-bottom: 0.4rem;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2.5rem;
   font-size: 2rem;
   font-weight: 700;
   text-transform: uppercase;
-  border-bottom: 4px solid #444;
   color: #198754;
 }
 
-
-/* ================================
-   SERVICES & PROJECTS
-================================== */
-.bg-success {
-  background-color: #198754 !important;
+.section-title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #a9a9a9, #c0c0c0); /* Plata */
+  margin: 8px auto 0;
+  border-radius: 2px;
 }
 
+/* ----------- SERVICES Section (Hover efecto) ----------- */
+.service-hover-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  background-color: #198754;
+}
+
+.service-hover-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.service-hover-card:hover img {
+  transform: scale(1.05);
+}
+
+.service-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 12px;
+}
+
+.service-hover-card:hover .service-overlay {
+  opacity: 1;
+}
+
+.overlay-text {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+}
+
+/* ----------- PROJECTS Section ----------- */
 .project-image {
   height: 250px;
   object-fit: cover;
   border-radius: 6px;
 }
 
-/* ================================
-   OUR VALUE
-================================== */
+/* ----------- OUR VALUE Section ----------- */
 .value-icon {
   width: 90px;
   height: 90px;
@@ -194,9 +153,7 @@ section:first-of-type,
   flex-grow: 1;
 }
 
-/* ================================
-   Footer
-================================== */
+/* ----------- Footer ----------- */
 .footer-contact p {
   font-size: 1.1rem;
   line-height: 1.6;
@@ -211,9 +168,7 @@ footer i:hover {
   color: #0a7e3e;
 }
 
-/* ================================
-   Responsive
-================================== */
+/* ----------- Responsive ----------- */
 @media (max-width: 768px) {
   .carousel-img {
     height: 280px;
@@ -231,26 +186,38 @@ footer i:hover {
   .section-title {
     font-size: 1.5rem;
   }
-}
 
-
-footer i {
-  transition: transform 0.2s ease-in-out;
-}
-
-footer i:hover {
-  transform: scale(1.2);
-  color: #0a7e3e;
-}
-
-/* Responsive para index */
-@media (max-width: 768px) {
-  .carousel-img {
-    height: 280px;
+  .overlay-text {
+    font-size: 1rem;
   }
+}
 
-  .value-icon {
-    width: 60px;
-    height: 60px;
-  }
+.section-title {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #198754;
+  position: relative;
+  text-align: center;
+  margin: 0 auto 2rem auto;
+  padding-bottom: 0.4rem;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  margin: 0.5rem auto 0 auto;
+  width: 100%;
+  max-width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #a9a9a9, #c0c0c0); /* plata */
+  border-radius: 2px;
+}
+
+/* Centrar los títulos correctamente */
+.section-title {
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto 2.5rem auto; /* centrado horizontal con margen inferior */
 }
