@@ -5,14 +5,16 @@
 /* ----------- HERO (Carrusel) ----------- */
 .hero-carousel {
   height: 100vh;
+  min-height: 600px;
+  position: relative;
+  overflow: hidden;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 .carousel-inner,
 .carousel-item {
-  height: 100vh;
+  height: 100%;
 }
 
 .carousel-img {
@@ -20,6 +22,7 @@
   width: 100%;
   object-fit: cover;
   object-position: center;
+  display: block;
 }
 
 #heroCarousel,
@@ -182,15 +185,20 @@ footer i:hover {
 
 /* ----------- Responsive ----------- */
 @media (max-width: 768px) {
-  .hero-carousel,
+  .hero-carousel {
+    height: 300px;
+    min-height: unset;
+  }
+
   .carousel-inner,
   .carousel-item {
-    height: auto;
+    height: 100%;
   }
 
   .carousel-img {
-    height: auto;
-    max-height: 300px;
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
   }
 
   .value-icon {
