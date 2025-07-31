@@ -9,15 +9,17 @@
 }
 
 .navbar-logo {
-  height: 80px;
-  width: auto;
+  height: auto;
+  width: 220px;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
 
+
 .navbar-logo:hover {
   transform: scale(1.05);
 }
+
 
 .navbar-brand small {
   font-size: 0.75rem;

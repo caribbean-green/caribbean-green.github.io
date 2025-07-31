@@ -1,15 +1,31 @@
-// Cargar Navbar y activar pestaña actual
+// script.js
+
 document.addEventListener("DOMContentLoaded", () => {
   const navbarContainer = document.getElementById("navbar-placeholder");
+  const footerContainer = document.getElementById("footer-placeholder");
 
-  fetch("components/navbar.html")
+  // Detecta en qué carpeta estamos
+  const pathDepth = window.location.pathname.split("/").length - 2;
+  const prefix = pathDepth > 0 ? "../".repeat(pathDepth) : "./";
+
+  // Carga navbar
+  fetch(`${prefix}components/navbar.html`)
     .then(res => res.text())
     .then(html => {
       navbarContainer.innerHTML = html;
-
       highlightActiveNav();
     })
     .catch(err => console.error("Error al cargar el navbar:", err));
+
+  // Carga footer
+  if (footerContainer) {
+    fetch(`${prefix}components/footer.html`)
+      .then(res => res.text())
+      .then(html => {
+        footerContainer.innerHTML = html;
+      })
+      .catch(err => console.error("Error al cargar el footer:", err));
+  }
 });
 
 function highlightActiveNav() {
