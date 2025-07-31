@@ -23,19 +23,16 @@
   <!-- NAVBAR -->
   <header id="navbar-placeholder"></header>
 
-  <!-- SERVICES -->
-
-
-  <!-- SECTOR STATEMENT -->
-  <div class="text-center my-5">
+  <!-- SECTOR INTRO -->
+  <section class="text-center my-5">
     <h2 class="text-success fw-bold text-uppercase mb-4">MULTIPLE SECTORS, 1 TRUSTED PARTNER</h2>
-    <p class="mx-auto text-justify" style="max-width: 700px;">
+    <p class="mx-auto sectors-intro">
       Our capabilities go beyond a single specialty. We deliver end-to-end engineering, construction, and energy
       solutions across key sectors. Our portfolio reflects our technical strength, adaptability, and commitment to
       excellence, no matter the industry.
     </p>
     <h5 class="text-success fw-bold">We've developed high-impact projects in sectors such as:</h5>
-  </div>
+  </section>
 
   <!-- SECTOR BUTTONS -->
   <div class="container my-4">
@@ -48,15 +45,14 @@
     </div>
   </div>
 
-  </section>
-
+  <!-- SERVICES SECTION -->
   <section class="services-section py-5">
     <div class="container">
-      <h2 class="text-center fw-bold text-success mb-5 text-uppercase">SERVICES</h2>
+      <h2 class="section-title text-center">SERVICES</h2>
 
-      <!-- SERVICE 1 -->
-      <div id="bim" class="service-card d-flex flex-column flex-md-row align-items-center mb-5 shadow-sm">
-        <div class="service-text pe-md-5">
+      <!-- SERVICE 1 - BIM -->
+      <div id="bim" class="service-card row align-items-center mb-5">
+        <div class="col-md-6">
           <h4 class="fw-bold text-success mb-3">BIM MANAGEMENT</h4>
           <p>
             We provide comprehensive Building Information Modeling (BIM) services that go beyond basic coordination.
@@ -67,15 +63,15 @@
             project lifecycle, from early design to facilities management.
           </p>
         </div>
-        <div class="service-image mt-4 mt-md-0">
+        <div class="col-md-6 text-center">
           <img src="../assets/img/Services/FOTO 1 BIM MANAGEMENT.jpg" alt="BIM Management"
-            class="img-fluid rounded shadow">
+            class="img-fluid rounded shadow service-img">
         </div>
       </div>
 
-      <!-- SERVICE 2 -->
-      <div id="epc" class="service-card d-flex flex-column flex-md-row-reverse align-items-center mb-5 shadow-sm">
-        <div class="service-text ps-md-5">
+      <!-- SERVICE 2 - EPC -->
+      <div id="epc" class="service-card row align-items-center flex-md-row-reverse mb-5">
+        <div class="col-md-6">
           <h4 class="fw-bold text-success mb-3">EPC Contract (Engineering, Procurement & Construction)</h4>
           <p>
             Our EPC model offers a turnkey solution where we assume full responsibility for the engineering,
@@ -86,14 +82,14 @@
             accountability, predictability, and performance.
           </p>
         </div>
-        <div class="service-image mt-4 mt-md-0">
-          <img src="../assets/img/Services/FOTO 2 EPC.jpg" alt="EPC" class="img-fluid rounded shadow">
+        <div class="col-md-6 text-center">
+          <img src="../assets/img/Services/FOTO 2 EPC.jpg" alt="EPC" class="img-fluid rounded shadow service-img">
         </div>
       </div>
 
-      <!-- SERVICE 3 -->
-      <div id="epcf" class="service-card d-flex flex-column flex-md-row align-items-center mb-5 shadow-sm">
-        <div class="service-text pe-md-5">
+      <!-- SERVICE 3 - EPC + F -->
+      <div id="epcf" class="service-card row align-items-center mb-5">
+        <div class="col-md-6">
           <h4 class="fw-bold text-success mb-3">EPC + F (Engineering, Procurement, Construction with Financing)</h4>
           <p>
             We offer an integrated EPC + F model that not only covers project design and execution, but also includes
@@ -104,27 +100,27 @@
             execution capacity enable us to deliver high-impact projects where others can’t.
           </p>
         </div>
-        <div class="service-image mt-4 mt-md-0">
-          <img src="../assets/img/Services/FOTO 3 EPC + F.jpg" alt="EPC + F" class="img-fluid rounded shadow">
+        <div class="col-md-6 text-center">
+          <img src="../assets/img/Services/FOTO 3 EPC + F.jpg" alt="EPC + F" class="img-fluid rounded shadow service-img">
         </div>
       </div>
+    </div>
+  </section>
 
+  <!-- FOOTER -->
+  <footer id="footer-placeholder"></footer>
 
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    fetch("../components/navbar.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("navbar-placeholder").innerHTML = data);
 
-      <!-- FOOTER -->
-      <footer id="footer-placeholder"></footer>
-
-      <!-- JS -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-      <script>
-        fetch("../components/navbar.html")
-          .then(res => res.text())
-          .then(data => document.getElementById("navbar-placeholder").innerHTML = data);
-
-        fetch("../components/footer.html")
-          .then(res => res.text())
-          .then(data => document.getElementById("footer-placeholder").innerHTML = data);
-      </script>
+    fetch("../components/footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+  </script>
 </body>
 
 </html>

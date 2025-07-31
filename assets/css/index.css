@@ -4,26 +4,34 @@
 
 /* ----------- HERO (Carrusel) ----------- */
 .hero-carousel {
-  max-height: none;
-  height: 90vh;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
   overflow: hidden;
-  margin-top: 0;
+}
+
+.carousel-inner,
+.carousel-item {
+  height: 100vh;
 }
 
 .carousel-img {
+  height: 100%;
   width: 100%;
-  height: 100vh;
   object-fit: cover;
+  object-position: center;
 }
 
-/* Elimina márgenes/paddings extra del carrusel */
 #heroCarousel,
 .hero-carousel,
-section:first-of-type,
-.carousel-inner,
-.carousel-item:first-child {
+section:first-of-type {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+section.about-section {
   margin-top: 0 !important;
-  padding-top: 0 !important;
+  padding-top: 3rem;
 }
 
 /* ----------- ABOUT US Section ----------- */
@@ -174,7 +182,9 @@ footer i:hover {
 
 /* ----------- Responsive ----------- */
 @media (max-width: 768px) {
-  .hero-carousel {
+  .hero-carousel,
+  .carousel-inner,
+  .carousel-item {
     height: auto;
   }
 

@@ -2,23 +2,45 @@
    Estilos para services.html
 ================================ */
 
-/* Colores base */
+/* --------- Colores base --------- */
 .bg-success {
   background-color: #198754 !important;
 }
 
-/* Sección general */
+/* --------- Sección principal --------- */
 .services-section {
   background-color: #f8f9fa;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0;
 }
 
-/* Tarjetas de servicios (BIM, EPC, EPC+F) */
+/* --------- Título centrado (sin línea decorativa) --------- */
+.section-title {
+  display: block;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #198754;
+  text-align: center;
+}
+
+/* Si quieres eliminar la línea decorativa, comenta o elimina esto */
+.section-title::after {
+  content: none;  /* <- Esta línea elimina completamente la barra decorativa */
+  /* display: block;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #a9a9a9, #c0c0c0);
+  margin: 8px auto 0;
+  border-radius: 2px; */
+}
+
+/* --------- Tarjetas de servicios --------- */
 .service-card {
   background-color: #ffffff;
   border-radius: 12px;
   padding: 30px;
+  margin-bottom: 2.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -28,38 +50,43 @@
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Contenido textual */
-.service-text {
-  flex: 1;
+.service-card p {
   text-align: justify;
   font-size: 1.05rem;
   line-height: 1.7;
 }
 
-/* Imagen */
+/* --------- Contenedor de imagen --------- */
 .service-image {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.service-image img {
+/* --------- Imagen --------- */
+.service-img {
   width: 100%;
-  max-height: 280px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 380px; /* reducido desde 450px */
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  margin-top: 1rem;
 }
 
-/* Botones de sectores */
+
+/* --------- Botones de sectores --------- */
 .sector-btn {
   padding: 10px 16px;
   font-weight: 500;
   font-size: 0.95rem;
   border-radius: 50px;
-  transition: all 0.3s ease-in-out;
   border: 1px solid #198754;
   color: #198754;
   background-color: transparent;
+  transition: all 0.3s ease-in-out;
   white-space: nowrap;
 }
 
@@ -68,7 +95,7 @@
   color: #fff;
 }
 
-/* Intro texto centrado */
+/* --------- Texto introductorio --------- */
 .sectors-intro {
   max-width: 700px;
   margin: 0 auto 2rem;
@@ -76,41 +103,36 @@
   text-align: center;
 }
 
-/* Utilidades */
+/* --------- Justificado moderno --------- */
 .text-justify {
   text-align: justify !important;
-  text-align-last: center;
+  text-align-last: left;
+  hyphens: auto;
 }
 
-/* Responsive */
+/* --------- Responsive --------- */
 @media (max-width: 768px) {
-  .service-image img {
-    max-height: 200px;
+  .service-card {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .service-img {
+    max-width: 90%;
+    margin-top: 1.2rem;
+  }
+
+  .service-card p {
+    font-size: 1rem;
+    line-height: 1.6;
   }
 
   .sector-btn {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
   }
 }
-
-.section-title {
-  position: relative;
-  display: inline-block;
-  padding-bottom: 0.5rem;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #198754;
-}
-
-.section-title::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(to right, #a9a9a9, #c0c0c0);
-  margin: 8px auto 0;
-  border-radius: 2px;
-}
-
